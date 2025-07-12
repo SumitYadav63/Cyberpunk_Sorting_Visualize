@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1 class="nav-heading">Sorting Visualizer</h1>
+    <nav class="glass">
+      <div class="algos">
+        <button>Bubble</button>
+        <button>Selection</button>
+        <button>Insertion</button>
+        <button>Merge</button>
+        <button>Quick</button>
+        <button>Heap</button>
+      </div>
+
+      <div class="array-inputs">
+        <label for="a_size">Size:</label>
+        <input id="a_size" type="range" min="20" max="150" step="1" value="50" />
+
+        <label for="a_speed">Speed:</label>
+        <input id="a_speed" type="range" min="1" max="5" step="1" value="3" />
+
+        <button id="a_generate">Generate New Array!</button>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div id="Info_Cont1" class="glass">
+      <h3>TIME COMPLEXITY</h3>
+      <div class="Complexity_Containers">
+        <div class="Pair_Definitions">
+          <p class="Sub_Heading">Worst case:</p>
+          <p id="Time_Worst"></p>
+        </div>
+        <div class="Pair_Definitions">
+          <p class="Sub_Heading">Average case:</p>
+          <p id="Time_Average"></p>
+        </div>
+        <div class="Pair_Definitions">
+          <p class="Sub_Heading">Best case:</p>
+          <p id="Time_Best"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="array_container"></div>
+
+    <div id="Info_Cont2" class="glass">
+      <h3>SPACE COMPLEXITY</h3>
+      <div class="Complexity_Containers">
+        <div class="Pair_Definitions">
+          <p class="Sub_Heading">Worst case:</p>
+          <p id="Space_Worst"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <script src="./scripts/main.js"></script>
+  <script src="./scripts/visualizations.js"></script>
+  <script src="./scripts/bubble_sort.js"></script>
+  <script src="scripts/selection_sort.js"></script>
+  <script src="scripts/insertion_sort.js"></script>
+  <script src="scripts/merge_sort.js"></script>
+  <script src="scripts/quick_sort.js"></script>
+  <script src="scripts/heap_sort.js"></script>
+</body>
+</html>

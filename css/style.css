@@ -1,0 +1,234 @@
+
+/* ===== CYBERPUNK SORTING VISUALIZER THEME ===== */
+
+/* Orbitron Font (Digital Aesthetic) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f172a;
+  color: #67e8f9;
+  padding: 1rem;
+}
+
+/* Header title with glow */
+h1.nav-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #67e8f9;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px #67e8f9, 0 0 15px #0ea5e9;
+  animation: glowPulse 2s infinite;
+}
+
+/* Frosted-glass nav panel */
+nav {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Sorting algorithm buttons */
+.algos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.algos button {
+  background: radial-gradient(circle at top left, #0f172a, #1e293b);
+  border: 2px solid #0ea5e9;
+  border-radius: 12px;
+  color: #67e8f9;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-shadow: 0 0 4px #67e8f9;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.algos button:hover {
+  background: #0ea5e9;
+  color: #0f172a;
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 0 10px #67e8f9;
+}
+
+/* Input sliders & generate button */
+.array-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.array-inputs label {
+  color: #a5f3fc;
+  font-size: 0.9rem;
+}
+
+.array-inputs input[type=range] {
+  accent-color: #0ea5e9;
+  background: transparent;
+}
+
+.array-inputs #a_generate {
+  background: radial-gradient(circle at top left, #0f172a, #1e293b);
+  border: 2px solid #0ea5e9;
+  border-radius: 12px;
+  color: #67e8f9;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 4px #67e8f9;
+}
+
+.array-inputs #a_generate:hover {
+  background: #0ea5e9;
+  color: #0f172a;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #67e8f9;
+}
+
+/* Main layout */
+section {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+#Info_Cont1,
+#Info_Cont2 {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Info headers */
+h3 {
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  color: #67e8f9;
+  text-shadow: 0 0 4px #67e8f9;
+}
+
+#array_container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 70vh;
+  gap: 0.2%;
+  position: relative;
+  overflow: hidden;
+  padding: 0 1%;
+}
+
+/* Bar styling */
+#array_container .bar {
+  transition: height 0.25s ease, background-color 0.25s ease;
+  text-align: center;
+  font-size: 0.65rem;
+  line-height: 1;
+  position: relative;
+}
+
+/* Floating values above bars */
+#array_container .bar::before {
+  content: attr(data-value);
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #67e8f9;
+  font-size: 0.7rem;
+  text-shadow: 0 0 4px #0ea5e9;
+}
+
+/* === State Color Classes === */
+.bar-default {
+  background-color: #0ea5e9;
+  box-shadow: 0 0 4px #0ea5e9;
+}
+
+.bar-compare {
+  background-color: #f1c40f;
+  box-shadow: 0 0 10px #f1c40f88;
+}
+
+.bar-swap {
+  background-color: #ff004d;
+  box-shadow: 0 0 12px #ff004d99;
+}
+
+.bar-pivot {
+  background-color: #00ffff;
+  box-shadow: 0 0 10px #00ffffcc;
+}
+
+.bar-active {
+  background-color: #9b59b6;
+  box-shadow: 0 0 10px #9b59b688;
+}
+
+.bar-sorted {
+  background-color: #39ff14;
+  box-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14;
+  animation: glow-pulse 1.5s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 10px transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px currentColor;
+  }
+}
+
+/* Glow for nav heading */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px #0ea5e9; }
+  50% { box-shadow: 0 0 20px #67e8f9; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  .algos,
+  .array-inputs {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #array_container {
+    height: 50vh;
+    padding: 0.5rem;
+  }
+}
