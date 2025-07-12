@@ -35,4 +35,4 @@ Tailwind CSS + Custom CSS (Orbitron font)
 Vanilla JavaScript
 
 
-Built with ☕, 🔥 and 💡 by [Your Sumit Yadav]
+Built with ☕, 🔥 and 💡 by [Sumit Yadav]
