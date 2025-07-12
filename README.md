@@ -27,28 +27,6 @@ A glowing, interactive, beginner-friendly sorting algorithm visualizer with glit
 
 ---
 
-## 🚀 How to Run
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/your-username/cyberpunk-sorting-visualizer.git
-cd cyberpunk-sorting-visualizer
-
-📦 Cyberpunk_Sorting_Visualizer
-├── index.html
-├── css/
-│   └── style.css
-├── scripts/
-│   ├── main.js
-│   ├── visualizations.js
-│   ├── bubble_sort.js
-│   ├── selection_sort.js
-│   ├── insertion_sort.js
-│   ├── merge_sort.js
-│   ├── quick_sort.js
-│   └── heap_sort.js
-
-
 
 🛠 Technologies
 
